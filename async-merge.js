@@ -81,9 +81,9 @@ function startSort() {
   setComparisonText(comparator.getA(),comparator.getB(),"Which is "+ question1 + "?");
 
   document.onkeydown = function(e) {
-    if(e.keyCode == 37) {
+    if(e.keyCode == 37) {         // left arrow
       nextSort(0);
-    } else if (e.keyCode == 39) {
+    } else if (e.keyCode == 39) { // right arrow
       nextSort(1);
     }
   }
