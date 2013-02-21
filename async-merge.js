@@ -68,21 +68,17 @@ AsyncComparator.prototype.getSorted = function() {
 var comparator;
 var input;
 var question1;
-var question2;
 var output1;
-var output2;
 
  
 function startSort() {
   input = document.getElementById("first");
   output1 = document.getElementById("output1");
-  output2 = document.getElementById("output2");
   question1 = document.getElementById("question1").value;
-  question2 = document.getElementById("question2").value;
   var arr = input.value.split("\n");
   
 	comparator = new AsyncComparator(arr);
-  setComparisonText(comparator.getA(),comparator.getB(),question1);
+  setComparisonText(comparator.getA(),comparator.getB(),"Which is "+ question1 + "?");
 
   document.onkeydown = function(e) {
     if(e.keyCode == 37) {
@@ -95,7 +91,7 @@ function startSort() {
 
 function nextSort(leftOrRight) {
   if(comparator.compared(leftOrRight)){
-    setComparisonImages(comparator.getA(),comparator.getB(),question1);
+    setComparisonText(comparator.getA(),comparator.getB(),"Which is "+ question1 + "?");
   } else { finishSort(); }
 }
 
@@ -107,12 +103,6 @@ function finishSort() {
 }
 
 function setComparisonText(l,r,c) {
-  document.getElementById('left').innerHTML = l;
-  document.getElementById('right').innerHTML = r;
-  document.getElementById('question').innerHTML = c;
-}
-
-function setComparisonImages(l,r,c) {
   document.getElementById('left').innerHTML = l;
   document.getElementById('right').innerHTML = r;
   document.getElementById('question').innerHTML = c;
