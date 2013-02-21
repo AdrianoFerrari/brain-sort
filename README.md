@@ -8,4 +8,4 @@ Usage
 1. Add list of items to textarea
 2. Add "sorting question". (e.g. "Which is more important?")
 3. Click Sort!
-4. Left or right arrows to choose.
+4. **Left or right arrows** to choose.
